@@ -1,7 +1,7 @@
 import pickle
 import pandas as pd
-import predict
-# from predict import feats, comparrison
+# import predict
+from predict import comparrison
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sportsreference.nba.roster import Roster, Player
