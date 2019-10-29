@@ -21,6 +21,9 @@ def hi_there():
 
 @APP.route('/predict', methods=['GET', 'POST'])
 def prediction():
+    feats = ['Team', 'FG_Percentage', 'TP_Percentage', 'FT_Percentage',
+             'Minutes.per.Game', 'Points.per.Game', 'TRB.per.game',
+             'Assits.per.Game', 'WS_per_game', 'BPM']
     xgbpipe = pickle.load(open('xgbpipe.pkl', 'rb'))
     askname = request.get_json(force=True, silent=True)
     print(askname)
